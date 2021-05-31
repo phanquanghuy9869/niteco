@@ -9,7 +9,15 @@ namespace Niteco.Domains.CrossRoad
 {
     public class Car
     {
-        public Intersection StartIntersection { get; private set; }
-        public Intersection TargetIntersection { get; private set; }
+        public string Name { get; private set; }
+        public int LeavingRoadSpeed { get; private set; }
+        public Intersection StartingIntersection { get; private set; }
+
+        public Car(string name, int leavingRoadSpeed, Intersection startingIntersection)
+        {
+            Name = name;
+            LeavingRoadSpeed = leavingRoadSpeed;
+            StartingIntersection = startingIntersection;
+        }
     }
 }
