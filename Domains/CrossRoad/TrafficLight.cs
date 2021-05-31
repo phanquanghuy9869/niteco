@@ -25,9 +25,9 @@ namespace Niteco.Domains.CrossRoad
             Color = color;
         }
 
-        public void ChangeColor(TrafficLightColor color)
+        public void ChangeColor()
         {
-            Color = color;
+            Color = Color == TrafficLightColor.Green ? TrafficLightColor.Red : TrafficLightColor.Green;
         }
     }
 }

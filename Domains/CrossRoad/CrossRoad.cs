@@ -9,26 +9,49 @@ namespace Niteco.Domains.CrossRoad
 {
     /// <summary>
     /// Object model of cross road
-    /// It includes 4 traffic light and 1 processing car
+    /// It contains 4 trafficlights, and 1 processing car
     /// </summary>
     public class CrossRoad
     {
         public Car ProcessingCar { get; private set; }
-        public TrafficLight North { get; private set; }
-        public TrafficLight South { get; private set; }
-        public TrafficLight West { get; private set; }
-        public TrafficLight East { get; private set; }
-        private bool PreceedingCarHasLeft;
+        public bool PreceedingCarHasLeft {get; private set;}
+        public Car[] Cars { get; private set; }
+        private TrafficLight[] _trafficLights;
 
-        public CrossRoad(TrafficLightColor x1PeriodColor, TrafficLightColor x2PeriodColor)
+        /// <summary>
+        /// Initialization of a cross road with trafficlights and cars
+        /// </summary>
+        /// <param name="x1Color">Starting color of traffic lights</param>
+        /// <param name="x2Color">Starting color of traffic lights/param>
+        /// <param name="leavingSpeed">How fast cars leave crossroad</param>
+        public CrossRoad(TrafficLightColor x1Color, TrafficLightColor x2Color, int leavingSpeed)
         {
-            North = new TrafficLight(Intersection.North, x1PeriodColor);
-            South = new TrafficLight(Intersection.South, x1PeriodColor);
-            West = new TrafficLight(Intersection.West, x2PeriodColor);
-            East = new TrafficLight(Intersection.East, x2PeriodColor);
-            PreceedingCarHasLeft = false;
+            throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// A car arrive to crossroads from a start intersection
+        /// </summary>
+        /// <param name="startIntersection"></param>
+        public void CarArrive(Intersection startIntersection)
+        {
+            throw new NotImplementedException();
+        }
 
+        /// <summary>
+        /// A car leaves crossroads
+        /// </summary>
+        public void CarLeave()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Crossroad change it's trafficlights's color
+        /// </summary>
+        public void ChangeTrafficLightColor()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

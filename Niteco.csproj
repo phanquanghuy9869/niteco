@@ -6,7 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Events\" />
+    <Folder Include="EventsControl\" />
+    <Folder Include="Cores\" />
+    <Folder Include="Cores\Interfaces\" />
+    <Folder Include="EventsControl\Events\" />
+    <Folder Include="EventsControl\EventsHandler\" />
   </ItemGroup>
 
 </Project>
